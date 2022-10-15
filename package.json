@@ -19,6 +19,9 @@
     "typescript": "^4.5.2"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "axios": "^1.1.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.1",
+    "soap": "^0.43.0"
   }
 }

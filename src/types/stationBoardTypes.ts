@@ -2,10 +2,10 @@ declare type SoapParams = GeneralParameters |
     GetNextOrFastestParameters | GetServiceDetails
 
 interface GeneralParameters {
-    numRows: number;
+    numRows?: number;
     crs: string;
-    filterCrs: string;
-    filterType: string;
+    filterCrs?: string;
+    filterType?: string;
     timeOffset?: number;
     timeWindow?: number;
 }
@@ -20,40 +20,6 @@ interface GetNextOrFastestParameters {
 interface GetServiceDetails {
     serviceID: string;
 }
-
-declare type Result = Array<
-    GetStationBoardResult | GetStationBoardWithDetailsResult |
-    GetDeparturesBoardResult | GetDeparturesBoardWithDetailsResult |
-    GetServiceDetailsResult
->;
-interface GetStationBoardResult {
-    GetStationBoardResult: StationBoard;
-}
-
-interface GetStationBoardWithDetailsResult {
-    GetStationBoardWithDetailsResult: GetStationBoardWithDetailsResult;
-}
-
-interface GetDeparturesBoardResult {
-    GetDeparturesBoardResult: DeparturesBoard;
-}
-
-interface GetDeparturesBoardWithDetailsResult {
-    GetDeparturesBoardWithDetailsResult: DeparturesBoardWithDetails;
-}
-
-interface GetServiceDetailsResult {
-    GetServiceDetailsResult: ServiceDetails;
-}
-
-declare type DataType =
-    CoachData | StationBoard |
-    StationBoardWithDetails | DeparturesBoard |
-    DeparturesBoardWithDetails | ServiceItem |
-    ServiceItemWithCallingPoints | DepartureItem |
-    DepartureItemWithCallingPoints | FormationData |
-    ServiceLocation | ServiceDetails | CallingPoint |
-    FilterList | ToiletAvailabilityType
 
 interface Board {
     generatedAt?: string;

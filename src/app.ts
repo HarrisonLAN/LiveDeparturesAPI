@@ -1,7 +1,7 @@
 import { LDBWSClient } from "./soapReq/ldbwsClient";
-const api = new LDBWSClient();
+import config from "./config";
+const api = new LDBWSClient(config.TOKEN_SECRET);
 async function req() {
-  let res = await api.GetDepartureBoard("HNX", 10);
-  console.log(res)
+  let res = await api.GetFastestDeparturesWithDetails("HNX", ["LVC"]);
 }
 req();
