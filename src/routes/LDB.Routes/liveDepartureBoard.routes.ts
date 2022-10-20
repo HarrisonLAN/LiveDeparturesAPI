@@ -7,9 +7,8 @@ import getFastest from './getFastest.routes';
 const router = express.Router();
 
 router.use('/Departures', getDepartures);
-router.use('/Arrivals', getDepartures);
-router.use('/Services', getDepartures);
-router.use('/fastest', getDepartures);
-router.use('/', getDepartures);
+router.use('/Arrivals', getArrivals);
+router.use('/Services', getServices);
+router.use('/fastest', getFastest);
 
 export default router;

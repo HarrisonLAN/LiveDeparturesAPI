@@ -1,4 +1,4 @@
-import controller from "../../controllers/getArribal.controller";
+import controller from "../../controllers/getArrival.controller";
 import express from "express";
 import { errHandler } from "../../middlewares/err.handler";
 

@@ -1,4 +1,4 @@
-import repository from"../repositories/getArrBoard"
+import repository from"../repositories/getArrBoard.repository"
 const GetArrBoardWithDetails = async (req, res, next) => {
     try {
         const payload = req.body;
