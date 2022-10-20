@@ -1,7 +1,8 @@
 import express from "express";
+import routes from './LDB.Routes/liveDepartureBoard.routes'
 
 const router = express.Router();
 
-router.use('/getLDB', require('./LDB.Routes/liveDepartureBoard.routes'));
+router.use('/getLDB', routes);
 
 export default router;
