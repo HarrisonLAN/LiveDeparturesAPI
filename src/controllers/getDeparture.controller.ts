@@ -13,7 +13,8 @@ const GetArrDepBoardWithDetails = async (req, res, next) => {
 };
 const getDepartureBoard = async (req, res, next) => {
     try {
-        const payload = req.body;
+        console.log(req.query)
+        const payload = req.query;
         const depBoard = await repository.getDepartureBoard(payload); ;
         if (!depBoard) {
             return res.status(400).json({ sucess: false });
